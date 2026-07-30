@@ -38,3 +38,9 @@ async def upload_ppt(file: UploadFile = File(...)):
         "total_slides": len(slides),
         "slides": slides
     }
+@app.get("/")
+async def root():   
+    return {"message": "Welcome to the PPTX Upload API. Use the /upload-ppt endpoint to upload a .pptx file."}          
+
+
+
